@@ -40,15 +40,12 @@
 */
 
 //GameObject
-function GameObject(createdAt, name, length, width, height) {
-  this.createdAt = createdAt.Date(),
+function GameObject(createdAt, name, dimensions) {
+  this.createdAt = createdAt,
   this.name = name,
-  this.dimensions = {
-    length: length,
-    width: width,
-    height: height,
-  }
+  this.dimensions = dimensions
 }
+
 
 GameObject.prototype.destroy = function() {
   return `${this.name} was removed from the game.`;
