@@ -40,15 +40,20 @@
 */
 
 //GameObject
-function GameObject(gOAttributes) {
-  this.createdAt = gOAttributes.createdAt;
-  this.dimensions = gOAttributes.dimensions;
+function GameObject(createdAt, name, length, width, height) {
+  this.createdAt = createdAt.Date(),
+  this.name = name,
+  this.dimensions = {
+    length: length,
+    width: width,
+    height: height,
+  }
 }
-CharacterStats.prototype = Object.create(Humanoid.prototype); //inheritance
 
 GameObject.prototype.destroy = function() {
   return `${this.name} was removed from the game.`;
 }
+
 
 //CharacterStats
 function CharacterStats(cSAttributes) {
@@ -60,6 +65,7 @@ CharacterStats.prototype = Object.create(GameObject.prototype); //inheritance
 CharacterStats.prototype.takeDamage = function() {
   return `${this.name} took damage.`;
 }
+
 
 //Humanoid
 function Humanoid(humAttributes) {
