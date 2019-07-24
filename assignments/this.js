@@ -62,4 +62,3 @@ werargumlin.say();
 
 rathala.say.call(werargumlin);
 werargumlin.say.apply(rathala);
-
