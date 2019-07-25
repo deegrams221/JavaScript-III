@@ -42,7 +42,7 @@
 //GameObject
 function GameObject(gOAttributes) {
   this.createdAt = gOAttributes.createdAt;
-  //this.name = gOAttributes.name;
+  this.name = gOAttributes.name;
   this.dimensions = gOAttributes.dimensions;
 }
 
@@ -55,7 +55,7 @@ GameObject.prototype.destroy = function() {
 //CharacterStats
 function CharacterStats(cSAttributes) {
   this.healthPoints = cSAttributes.healthPoints;
-  this.name = cSAttributes.name;
+  //this.name = cSAttributes.name;
   GameObject.call(this, cSAttributes);
 }
 CharacterStats.prototype = Object.create(GameObject.prototype); //inheritance
